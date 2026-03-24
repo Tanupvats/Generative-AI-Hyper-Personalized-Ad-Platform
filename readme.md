@@ -178,4 +178,3 @@ To gracefully terminate the platform and flush GPU VRAM:
    ```
 
    *(Note: The `down` command safely stops and removes the containers but preserves any trained models or data stored in the mapped volumes).*
-```
