@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  rvc-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rvc-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount local folders to persist your trained models and datasets
+      - ./models:/voiceconversion/models
+      - ./datasets:/voiceconversion/datasets
+      - ./indices:/voiceconversion/indices
+      - ./temp:/voiceconversion/temp
+    # If you are running this on a machine with an NVIDIA GPU, uncomment the block below:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped

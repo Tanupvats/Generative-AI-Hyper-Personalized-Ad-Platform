@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  wav2lip-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wav2lip_microservice
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the local checkpoints directory so you don't have to rebuild 
+      # the Docker image every time you update your model weights.
+      - ./checkpoints:/app/checkpoints
+    environment:
+      # Ensures PyTorch sees the GPU
+      - NVIDIA_VISIBLE_DEVICES=all 
+      - WAV2LIP_CHECKPOINT=checkpoints/wav2lip_gan.pth
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1 # Change to 'all' if you want to expose multiple GPUs
+              capabilities: [gpu]
+    restart: unless-stopped
