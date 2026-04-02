@@ -26,7 +26,7 @@ The platform is divided into three primary tiers: the Client Interface, the API 
 
 The compute-intensive workloads are distributed across two distinct REST APIs. This allows for horizontal scaling and prevents Python dependency conflicts between the discrete ML codebases.
 
-### 1. Voice Conversion Service (RVC) - `api.py`
+### 1. Voice Conversion Service (RVC)
 
 ###  HLSD : End‑to‑End Flow of RVC
 
@@ -38,7 +38,7 @@ A headless FastAPI backend managing Retrieval-based Voice Conversion.
 * **`POST /isolate`**: Utility endpoint leveraging `UVR5` to separate vocals from background noise/music.
 * **`POST /train`**: Background task endpoint triggering a Distributed Data Parallel (DDP) training loop, which encompasses dataset preprocessing, Faiss index generation, and VITS model training.
 
-### 2. Lip-Sync Service (Wav2Lip) - `main.py`
+### 2. Lip-Sync Service (Wav2Lip) 
 
 ###  HLSD : End‑to‑End Flow of LIPSYNC
 
