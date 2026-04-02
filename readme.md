@@ -1,5 +1,5 @@
 
-# GenAI Ad Platform: System Architecture & Deployment Guide
+# GenAI Ad Platform
 
 The GenAI Hyper-Personalized Ad Platform is an automated, machine learning-driven pipeline designed to generate custom video advertisements at scale. By taking a driving text script, client data, and a base actor video, the system synthesizes realistic, lip-synced video outputs featuring a specific target voice.
 
