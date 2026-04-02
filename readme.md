@@ -5,6 +5,13 @@ The GenAI Hyper-Personalized Ad Platform is an automated, machine learning-drive
 
 The system leverages a decoupled microservices architecture to orchestrate Text-to-Speech (gTTS), Voice Style Transfer (RVC), and Video Lip-Syncing (Wav2Lip), ensuring that heavy GPU-bound PyTorch workloads do not block the web application's event loop.
 
+## Demo Video
+
+### ▶ Video : End‑to‑End Gen AI based Add creation
+
+[![Watch Video ](demo_add_platform.gif)](https://drive.google.com/file/d/1XieoHJMR0nLRUnfjvocxprYNpB8co1RZ/view?usp=sharing)
+
+
 ##  High-Level System Architecture
 
 The platform is divided into three primary tiers: the Client Interface, the API Orchestrator, and the ML Microservices layer.
@@ -12,14 +19,6 @@ The platform is divided into three primary tiers: the Client Interface, the API 
 ###  HLSD : End‑to‑End Flow of Add Platform
 
 [![System Design](system_architecture_full.png)]()  
-
----
-
-## Demo Video
-
-### ▶ Video : End‑to‑End Gen AI based Add creation
-
-[![Watch Video ](demo_add_platform.gif)](https://drive.google.com/file/d/1XieoHJMR0nLRUnfjvocxprYNpB8co1RZ/view?usp=sharing)
 
 ---
 
@@ -178,3 +177,8 @@ To gracefully terminate the platform and flush GPU VRAM:
    ```
 
    *(Note: The `down` command safely stops and removes the containers but preserves any trained models or data stored in the mapped volumes).*
+
+## Author
+
+**Tanup Vats**
+   
