@@ -7,7 +7,7 @@ The system leverages a decoupled microservices architecture to orchestrate Text-
 
 ## Demo Video
 
-### ▶ Video : End‑to‑End Gen AI based Add creation
+### ▶ Video : End‑to‑End Gen AI based Ad creation
 
 [![Watch Video ](demo_add_platform.gif)](https://drive.google.com/file/d/1XieoHJMR0nLRUnfjvocxprYNpB8co1RZ/view?usp=sharing)
 
@@ -16,7 +16,7 @@ The system leverages a decoupled microservices architecture to orchestrate Text-
 
 The platform is divided into three primary tiers: the Client Interface, the API Orchestrator, and the ML Microservices layer.
 
-###  HLSD : End‑to‑End Flow of Add Platform
+###  HLSD : End‑to‑End Flow of Ad Platform
 
 [![System Design](system_architecture_full.png)]()  
 
@@ -102,11 +102,11 @@ To maintain absolute dependency isolation, the core models run in independent Do
    ```
 
 
-### Step 2: Gen AI Hyper Personalized Add Portal
+### Step 2: Gen AI Hyper Personalized Ad Portal
 
 The portal serves as the traffic controller, mediating between the React frontend and the backend ML containers via asynchronous HTTP (`httpx`).
 
-1. Navigate to the `Gen-AI-Hyper-Personalized-Add-Portal/` directory.
+1. Navigate to the `Gen-AI-Hyper-Personalized-Ad-Portal/` directory.
 2. Initialize and activate a Python virtual environment:
 
    ```bash
